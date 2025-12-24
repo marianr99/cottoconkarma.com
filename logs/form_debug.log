@@ -1,0 +1,13 @@
+Received form_type: regular_booking_form at 2025-08-07 17:04:46
+Received form_type: spacial_request_form at 2025-08-07 17:17:29
+Error: Time is required. Date is required. PersonName is required. Invalid or missing email format. at 2025-08-07 17:17:29
+Received form_type: regular_booking_form at 2025-08-07 17:17:40
+Error: PersonName is required. at 2025-08-07 17:17:40
+Received form_type: regular_booking_form at 2025-08-07 17:17:47
+Received form_type: regular_booking_form
+Mailer Error: SMTP Error: Could not connect to SMTP host.
+Received form_type: spacial_request_form
+Received form_type: spacial_request_form
+Received form_type: quote_form
+Received form_type: quote_form
+Received form_type: reserve_form
