@@ -13,6 +13,14 @@
 
 }
 
+/* Font Saman */
+@font-face {
+  font-family: "Saman";
+  src: url("../fonts/SAMAN___.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* template-color */
 
 .scroll-top{
