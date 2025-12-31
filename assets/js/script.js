@@ -9,11 +9,19 @@
 		}
 	}
 
+	// Chiudi al click
 	if ($(".preloader-close").length) {
-        $(".preloader-close").on("click", function(){
-            $('.loader-wrap').delay(200).fadeOut(500);
-        })
-    }
+		$(".preloader-close").on("click", function(){
+			$('.loader-wrap').delay(200).fadeOut(500);
+		})
+	}
+
+	// Timeout massimo 3 secondi
+	setTimeout(function(){
+		if($('.loader-wrap').is(':visible')){
+			$('.loader-wrap').fadeOut(500);
+		}
+	}, 3000);
 
 	if ($('.side-navigation').length) {
         $('.side-nav-opener').on('click', function() {
