@@ -146,7 +146,7 @@ p{
   font-family: var(--primary-font);
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.8em;
   color: var(--higer-secondary-color);
   transition: all 500ms ease;

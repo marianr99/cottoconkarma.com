@@ -6327,3 +6327,8 @@ input.property-amount{
     background-position: center top;
     background-size: cover;
 }
+
+.tab___img img{
+  width:60px;
+  height:60px;
+}
