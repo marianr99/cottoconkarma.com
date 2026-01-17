@@ -5,7 +5,7 @@
 	//Hide Loading Box (Preloader)
 	function handlePreloader() {
 		if($('.loader-wrap').length){
-			$('.loader-wrap').delay(1000).fadeOut(500);
+			$('.loader-wrap').delay(3000).fadeOut(500);
 		}
 	}
 
@@ -16,7 +16,7 @@
 		})
 	}
 
-	// Timeout massimo 3 secondi
+	// Timeout minimo e massimo 3 secondi
 	setTimeout(function(){
 		if($('.loader-wrap').is(':visible')){
 			$('.loader-wrap').fadeOut(500);
