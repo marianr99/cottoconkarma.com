@@ -11,8 +11,8 @@
         const centerY = canvas.height / 2;
         
         // Crea multipli splat che partono dal centro verso l'esterno
-        const splatCount = 8;
-        const radius = 100;
+        const splatCount = 48;
+        const radius = 60;
         
         for (let i = 0; i < splatCount; i++) {
             const angle = (Math.PI * 2 * i) / splatCount;
@@ -45,19 +45,24 @@
         if (!canvas) return;
         
         // Crea fumo iniziale più intenso
+        createCenterSmoke();
+        setTimeout(() => {
+            createCenterSmoke();
+        }, 40);
         setTimeout(() => {
             createCenterSmoke();
         }, 100);
+        setTimeout(() => {
+            createCenterSmoke();
+        }, 180);
         
-        // Continua a creare fumo dal centro ogni 300ms
+        // Continua a creare fumo dal centro ogni 80ms
         smokeInterval = setInterval(() => {
             if (document.querySelector('.loader-wrap') && 
                 window.getComputedStyle(document.querySelector('.loader-wrap')).display !== 'none') {
                 createCenterSmoke();
-            } else {
-                clearInterval(smokeInterval);
             }
-        }, 300);
+        }, 80);
     }
     
     // Avvia l'effetto quando il DOM è pronto
@@ -73,7 +78,7 @@
             if (smokeInterval) {
                 clearInterval(smokeInterval);
             }
-        }, 3500);
+        }, 10000);
     });
     
 })();
