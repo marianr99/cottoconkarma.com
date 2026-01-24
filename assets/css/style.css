@@ -4065,8 +4065,15 @@ footer.main-footer.three .footer___bottom a:hover {
   margin: 0 auto;
 }
 .our__choice__section.four .name__price__shrtd.body__one li:after{
-  width: 68%;
-  right: 0;
+  display: none;
+}
+.our__choice__section.four .menu__content:after {
+  content: "";
+  background: var(--secondary-color);
+  width: 100%;
+  height: 1px;
+  display: block;
+  margin-top: 20px;
 }
 .our__choice__section.four .menu__item__img img {
   width: 93px;
