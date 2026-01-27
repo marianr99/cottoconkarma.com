@@ -2,37 +2,73 @@
 (function() {
     'use strict';
     
-    // Funzione per creare splat di fumo dal centro
-    function createCenterSmoke() {
+    // Funzione per creare TANTISSIMO fumo dal centro
+    function createMassiveSmoke() {
         const canvas = document.getElementById('tcg-smoke-cursor');
-        if (!canvas) return;
+        if (!canvas || !window.splatSmoke) return;
         
         const centerX = canvas.width / 2;
         const centerY = canvas.height / 2;
         
-        // Crea multipli splat che partono dal centro verso l'esterno
-        const splatCount = 48;
-        const radius = 60;
+        // Crea fumo dal centro - ridotto per performance!
+        const layers = [
+            { count: 20, radius: 200, speed: 700 },
+            { count: 15, radius: 140, speed: 600 },
+            { count: 10, radius: 80, speed: 500 }
+        ];
         
-        for (let i = 0; i < splatCount; i++) {
-            const angle = (Math.PI * 2 * i) / splatCount;
-            const dx = Math.cos(angle) * radius;
-            const dy = Math.sin(angle) * radius;
+        layers.forEach((layer, layerIndex) => {
+            for (let i = 0; i < layer.count; i++) {
+                const angle = (Math.PI * 2 * i) / layer.count + (layerIndex * 0.3);
+                const offsetX = Math.cos(angle) * layer.radius;
+                const offsetY = Math.sin(angle) * layer.radius;
+                
+                const dx = offsetX / layer.radius * layer.speed;
+                const dy = offsetY / layer.radius * layer.speed;
+                
+                const color = {
+                    r: 10.0,
+                    g: 10.0,
+                    b: 10.0
+                };
+                
+                window.splatSmoke(centerX, centerY, dx, dy, color);
+            }
+        });
+    }
+    
+    // Funzione per creare piccole nuvole di fumo casuali sparse
+    function createRandomSmoke() {
+        const canvas = document.getElementById('tcg-smoke-cursor');
+        if (!canvas || !window.splatSmoke) return;
+        
+        // Crea 1-2 piccole nuvole casuali
+        const numClouds = Math.floor(Math.random() * 2) + 1;
+        
+        for (let cloud = 0; cloud < numClouds; cloud++) {
+            // Posizione casuale ma preferibilmente vicino al centro
+            const randomX = canvas.width * (0.3 + Math.random() * 0.4);
+            const randomY = canvas.height * (0.3 + Math.random() * 0.4);
             
-            // Simula un movimento mouse dal centro verso l'esterno
-            const pointer = {
-                x: centerX,
-                y: centerY,
-                dx: dx * 0.5,
-                dy: dy * 0.5,
-                down: true,
-                moved: true,
-                color: [255, 255, 255] // Colore bianco per il fumo
-            };
+            // Piccola nuvola con poche particelle
+            const particleCount = 6;
+            const radius = 25 + Math.random() * 15;
             
-            // Questo dovrebbe interagire con lo smoke-animation.js esistente
-            if (window.splatPointer) {
-                window.splatPointer(pointer);
+            for (let i = 0; i < particleCount; i++) {
+                const angle = (Math.PI * 2 * i) / particleCount;
+                const offsetX = Math.cos(angle) * radius;
+                const offsetY = Math.sin(angle) * radius;
+                
+                const dx = offsetX / radius * 250; // Ridotto da 400 a 250
+                const dy = offsetY / radius * 250;
+                
+                const color = {
+                    r: 8.0 + Math.random() * 2.0,
+                    g: 8.0 + Math.random() * 2.0,
+                    b: 8.0 + Math.random() * 2.0
+                };
+                
+                window.splatSmoke(randomX, randomY, dx, dy, color);
             }
         }
     }
@@ -44,25 +80,59 @@
         const canvas = document.getElementById('tcg-smoke-cursor');
         if (!canvas) return;
         
-        // Crea fumo iniziale più intenso
-        createCenterSmoke();
-        setTimeout(() => {
-            createCenterSmoke();
-        }, 40);
-        setTimeout(() => {
-            createCenterSmoke();
-        }, 100);
-        setTimeout(() => {
-            createCenterSmoke();
-        }, 180);
-        
-        // Continua a creare fumo dal centro ogni 80ms
-        smokeInterval = setInterval(() => {
-            if (document.querySelector('.loader-wrap') && 
-                window.getComputedStyle(document.querySelector('.loader-wrap')).display !== 'none') {
-                createCenterSmoke();
+        // Attendi che smoke-animation.js sia pronto
+        const waitForSmoke = setInterval(() => {
+            if (window.splatSmoke) {
+                clearInterval(waitForSmoke);
+                
+                // ESPLOSIONE INIZIALE - ridotta per performance
+                for (let i = 0; i < 8; i++) {
+                    setTimeout(() => {
+                        createMassiveSmoke();
+                    }, i * 30);
+                }
+                
+                // Continua a creare fumo ogni 60ms
+                smokeInterval = setInterval(() => {
+                    if (document.querySelector('.loader-wrap') && 
+                        window.getComputedStyle(document.querySelector('.loader-wrap')).display !== 'none') {
+                        createMassiveSmoke();
+                    }
+                }, 60);
+                
+                // FERMA il fumo centrale dopo 2 secondi
+                setTimeout(() => {
+                    if (smokeInterval) {
+                        clearInterval(smokeInterval);
+                    }
+                }, 2000);
+                
+                // Fumo casuale sparse ogni 400ms - continua fino alla fine
+                const randomSmokeInterval = setInterval(() => {
+                    if (document.querySelector('.loader-wrap') && 
+                        window.getComputedStyle(document.querySelector('.loader-wrap')).display !== 'none') {
+                        createRandomSmoke();
+                    }
+                }, 400);
+                
+                // Esplosioni BONUS solo nei primi 2 secondi
+                const boostIntervals = [500, 1000, 1500];
+                boostIntervals.forEach(time => {
+                    setTimeout(() => {
+                        for (let i = 0; i < 5; i++) {
+                            setTimeout(() => createMassiveSmoke(), i * 20);
+                        }
+                    }, time);
+                });
+                
+                // Pulisci anche l'intervallo del fumo casuale
+                window.addEventListener('load', function() {
+                    setTimeout(() => {
+                        clearInterval(randomSmokeInterval);
+                    }, 10000);
+                });
             }
-        }, 80);
+        }, 100);
     }
     
     // Avvia l'effetto quando il DOM è pronto

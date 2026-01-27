@@ -1449,6 +1449,10 @@
                 splat(x, y, dx, dy, color);
             }
         }
+        
+        // Esponi le funzioni globalmente per il preloader
+        window.splatSmoke = splat;
+        window.multipleSplatsSmoke = multipleSplats;
 
         function resizeCanvas() {
             if (

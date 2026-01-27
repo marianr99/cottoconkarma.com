@@ -17,7 +17,7 @@
     height: auto;
     opacity: 0;
     filter: blur(20px);
-    animation: emergeFromSmoke 3s ease-in-out forwards;
+    animation: emergeFromSmoke 2.5s ease-in-out forwards;
     animation-delay: 0.5s;
 }
 
