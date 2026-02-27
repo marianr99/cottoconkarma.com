@@ -961,13 +961,13 @@
     background-image: none !important;
   }
   .food__right__img_feature_image {
-    margin-left: 15px;
+    margin-left: 0px;
   }
   .food__right__img_feature_image img{
     padding-top: 0px;
-    width: 50%;
-    padding-bottom: 50px;
-    padding-right: 15px;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-right: 0px;
   }
   .batter__food {
     padding: 60px 0px 0px;
@@ -1210,7 +1210,14 @@
     width: 100%;
   }
   .food__right__img_feature_image img {
-    opacity: 0;
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  .batter__food__left {
+    background-image: none !important;
+    height: auto;
   }
   .menu__from__section--update .center__title {
     padding: 0px 0px 20px;

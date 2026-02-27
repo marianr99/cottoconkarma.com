@@ -5,7 +5,7 @@
 	//Hide Loading Box (Preloader)
 	function handlePreloader() {
 		if($('.loader-wrap').length){
-			$('.loader-wrap').delay(3000).fadeOut(500);
+			$('.loader-wrap').delay(4000).fadeOut(500);
 		}
 	}
 
@@ -16,12 +16,12 @@
 		})
 	}
 
-	// Timeout minimo e massimo 3 secondi
+	// Timeout minimo e massimo 4 secondi
 	setTimeout(function(){
 		if($('.loader-wrap').is(':visible')){
 			$('.loader-wrap').fadeOut(500);
 		}
-	}, 3000);
+	}, 4000);
 
 	if ($('.side-navigation').length) {
         $('.side-nav-opener').on('click', function() {
