@@ -43,6 +43,50 @@
   }
 }
 
+/* Language flags selector */
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 30px;
+}
+
+.lang-flag img {
+  width: 28px;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.lang-flag {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.lang-flag:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.lang-flag.active {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+@media only screen and (max-width: 991px) {
+  .lang-selector {
+    position: fixed;
+    top: 15px;
+    right: 60px;
+    z-index: 1000;
+  }
+}
+
 .anim-icon .icon {
   position: absolute;
   background-repeat: no-repeat;

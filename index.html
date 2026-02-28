@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -97,6 +97,10 @@
                     <div class="logo-box">
                         <figure class="logo"><a href="index.html"><img src="assets/images/tmp/logo.png" alt=""></a></figure>
                     </div>
+                    <div class="lang-selector">
+                        <a href="#" class="lang-flag active" data-lang="it" title="Italiano"><img src="https://flagcdn.com/w40/it.png" alt="IT"></a>
+                        <a href="#" class="lang-flag" data-lang="en" title="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></a>
+                    </div>
                     <div class="menu-area" style="margin-right:20px;">
                         <!--Mobile Navigation Toggler-->
                         <div class="mobile-nav-toggler">
@@ -107,15 +111,15 @@
                         <nav class="main-menu navbar-expand-md navbar-light">
                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li><a href="index.html">Home</a>
+                                    <li><a href="index.html" data-i18n="nav-home">Home</a>
                                     </li> 
-                                    <li><a href="#divChisiamo">Chi siamo</a>
+                                    <li><a href="#divChisiamo" data-i18n="nav-about">Chi siamo</a>
                                     </li>
-                                    <li><a href="#divMenu">Menu</a>
+                                    <li><a href="#divMenu" data-i18n="nav-menu">Menu</a>
                                     </li>
-                                    <li><a href="#divContattaci">Contattaci</a>
+                                    <li><a href="#divContattaci" data-i18n="nav-contact">Contattaci</a>
                                     </li> 
-                                    <li><a href="#divDove">Dove trovarci</a></li>     
+                                    <li><a href="#divDove" data-i18n="nav-location">Dove trovarci</a></li>     
                                 </ul>
                             </div>
                         </nav>
@@ -155,7 +159,7 @@
                 <div class="nav-logo"><a href="index.html"><img src="assets/images/logo.jpg" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
                 <div class="contact-info">
-                    <h4>Contact Info</h4>
+                    <h4 data-i18n="contact-info">Contatti</h4>
                     <ul>
                         <li>10141 Corso Racconigi 138, Torino</li>
                         <li><a href="tel:+393315253658">331 525 3658</a> </li>
@@ -231,10 +235,10 @@
                         <div class="content-inner">
                             <div class="content-box">
                                 <div class="sub____title" style="padding-bottom: 0;">
-                                    <span style="font-size:50px;">Benvenuti!</span>
+                                    <span style="font-size:50px;" data-i18n="welcome">Benvenuti!</span>
                                 </div>
                                  <img src="assets/images/tmp/scrittaConBordo.png" style="width:800px;height:180px;margin-bottom:20px;" alt="">
-                                <p style="font-size:32px;-webkit-text-stroke: 1px black;font-weight: bold;">Spezie che sussurrano storie,<br> aromi che raccontano terre lontane. </p>
+                                <p style="font-size:32px;-webkit-text-stroke: 1px black;font-weight: bold;" data-i18n="banner-tagline">Spezie che sussurrano storie,<br> aromi che raccontano terre lontane. </p>
                                 <!-- <div class="icon-strip">
                                     <div class="anim-icon-banner">
                                         <div class="icon" data-parallax='{"x": 500}' style="background-image: url(assets/images/tmp/test.png);"></div>
@@ -319,25 +323,25 @@
                         <div class="col-lg-5 col-md-12 col-sm-12 content-column">
                             <div class="title__section">
                                 <div class="sub____title">
-                                    <span>Chi siamo</span>
+                                    <span data-i18n="about-title">Chi siamo</span>
                                 </div>
                                 <div class="main____title">
                                     <h2 class="heading-primary"><span>Karma</span> in every bite.<br></h2>
                                 </div>
                             </div>
                             <div class="normal__text">
-                                <p>
+                                <p data-i18n="about-text-1">
                                     Ogni piatto ha una conseguenza.
                                     Per questo cuciniamo con intenzione, scegliendo ingredienti locali, stagionali e sostenibili.
                                     Rispettiamo la terra, chi la coltiva e chi la nutre.
                                 </p>
                                 <br>
-                                <p>
+                                <p data-i18n="about-text-2">
                                     Crediamo che ciò che cucini torni indietro.
                                     Meglio farlo delizioso!
                                 </p>
                                 <br>
-                                <p>
+                                <p data-i18n="about-text-3">
                                     Noi scegliamo di mettere sapore, etica e bellezza.
                                     Cotto con Karma è più di una cucina: <span>è un modo di vivere.</span>
                                     Mangia bene. Vivi meglio.
@@ -383,8 +387,8 @@
                                     </div>
                                 </div>
                                 <div class="food___text">
-                                    <h5>Cucina Pulita e Sicura</h5>
-                                    <p>Ogni piatto nasce in un ambiente curato e igienico, dove i sapori indiani incontrano la tradizione italiana per regalarti un’esperienza unica e sicura.</p>
+                                    <h5 data-i18n="feature-1-title">Cucina Pulita e Sicura</h5>
+                                    <p data-i18n="feature-1-text">Ogni piatto nasce in un ambiente curato e igienico, dove i sapori indiani incontrano la tradizione italiana per regalarti un'esperienza unica e sicura.</p>
                                 </div>
                             </div>
                         </div>
@@ -399,8 +403,8 @@
                                     </div>
                                 </div>
                                 <div class="food___text">
-                                    <h5>Ingredienti Freschi</h5>
-                                    <p>Solo prodotti freschi e selezionati, scelti con cura per esaltare ogni aroma e ogni spezia, un viaggio tra l’India e l’Italia in ogni morso.</p>
+                                    <h5 data-i18n="feature-2-title">Ingredienti Freschi</h5>
+                                    <p data-i18n="feature-2-text">Solo prodotti freschi e selezionati, scelti con cura per esaltare ogni aroma e ogni spezia, un viaggio tra l'India e l'Italia in ogni morso.</p>
                                 </div>
                             </div>
                         </div>
@@ -415,8 +419,8 @@
                                     </div>
                                 </div>
                                 <div class="food___text">
-                                    <h5>Chef Esperti</h5>
-                                    <p>I nostri chef combinano tecniche indiane e italiane per creare piatti ricchi di gusto, sapori intensi e presentazioni sorprendenti.</p>
+                                    <h5 data-i18n="feature-3-title">Chef Esperti</h5>
+                                    <p data-i18n="feature-3-text">I nostri chef combinano tecniche indiane e italiane per creare piatti ricchi di gusto, sapori intensi e presentazioni sorprendenti.</p>
                                 </div>
                             </div>
                         </div>
@@ -431,8 +435,8 @@
                                     </div>
                                 </div>
                                 <div class="food___text">
-                                    <h5>Eventi e Feste</h5>
-                                    <p>Porta la magia dei nostri sapori a casa tua o in azienda: eventi personalizzati che uniscono il meglio dell'India e dell'Italia.</p>
+                                    <h5 data-i18n="feature-4-title">Eventi e Feste</h5>
+                                    <p data-i18n="feature-4-text">Porta la magia dei nostri sapori a casa tua o in azienda: eventi personalizzati che uniscono il meglio dell'India e dell'Italia.</p>
                                 </div>
                             </div>
                         </div>                        
@@ -453,14 +457,14 @@
                 <div class="center__title">
                     <div class="title__section">
                         <div class="sub____title">
-                            <span>Special selection</span>
+                            <span data-i18n="menu-subtitle">Special selection</span>
                         </div>
                         <div class="main____title p_relative">
-                            <h2 class="heading-primary">Dal <span> Nostro Menu</span></h2>
+                            <h2 class="heading-primary" data-i18n="menu-title">Dal <span> Nostro Menu</span></h2>
                         </div>
                         <div class="divider wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"><div></div></div>
-                        <p><a href="assets/pdf/Menù delivery.pdf" target="_blank" rel="noopener noreferrer">Scarica qui il menù</a></p>
-                        <p><a href="assets/pdf/Elenco allergeni.pdf" target="_blank" rel="noopener noreferrer">Scarica qui gli allergeni</a></p>
+                        <p><a href="assets/pdf/Menù delivery.pdf" target="_blank" rel="noopener noreferrer" data-i18n="download-menu">Scarica qui il menù</a></p>
+                        <p><a href="assets/pdf/Elenco allergeni.pdf" target="_blank" rel="noopener noreferrer" data-i18n="download-allergens">Scarica qui gli allergeni</a></p>
                     </div>
                 </div>
             </div>
@@ -478,7 +482,7 @@
                                             <img src="assets/images/menu-item/appetizer_bg_1.png" alt="">
                                         </div>
                                     </div>
-                                    <h6>Antipasti</h6>
+                                    <h6 data-i18n="tab-antipasti">Antipasti</h6>
                                 </div>
                             </li>
                             <li class="tab-btn" data-tab="#tab-2">
@@ -491,7 +495,7 @@
                                             <img src="assets/images/menu-item/salads_bg_1.png" alt="">
                                         </div>
                                     </div>
-                                    <h6>Contorni</h6>
+                                    <h6 data-i18n="tab-contorni">Contorni</h6>
                                 </div>
                             </li>
                             <li class="tab-btn" data-tab="#tab-3">
@@ -504,7 +508,7 @@
                                             <img src="assets/images/tmp/biryani2.png" style="width:60px;height:60px;" alt="">
                                         </div>
                                     </div>
-                                    <h6>Biryani e dosa</h6>
+                                    <h6 data-i18n="tab-biryani">Biryani e dosa</h6>
                                 </div>  
                             </li>
                             <li class="tab-btn" data-tab="#tab-4">
@@ -517,7 +521,7 @@
                                             <img src="assets/images/tmp/secondi2.png" style="width:60px;height:60px;"  alt="">
                                         </div>
                                     </div>
-                                    <h6>Secondi</h6>
+                                    <h6 data-i18n="tab-secondi">Secondi</h6>
                                 </div>  
                             </li>
                             <li class="tab-btn" data-tab="#tab-5">
@@ -530,7 +534,7 @@
                                             <img src="assets/images/menu-item/dessert_bg_4.png" alt="">
                                         </div>
                                     </div>
-                                    <h6>Dolci</h6>
+                                    <h6 data-i18n="tab-dolci">Dolci</h6>
                                 </div>  
                             </li>
                             <!-- <li class="tab-btn" data-tab="#tab-6">
@@ -556,7 +560,7 @@
                                             <img src="assets/images/tmp/pane2.png" style="width:60px;height:60px;" alt="">
                                         </div>
                                     </div>
-                                    <h6>Pane</h6>
+                                    <h6 data-i18n="tab-pane">Pane</h6>
                                 </div>  
                             </li>
                             <li class="tab-btn" data-tab="#tab-7">
@@ -569,7 +573,7 @@
                                             <img src="assets/images/tmp/altro2.png" style="width:60px;height:60px;" alt="">
                                         </div>
                                     </div>
-                                    <h6>Altro</h6>
+                                    <h6 data-i18n="tab-altro">Altro</h6>
                                 </div>  
                             </li>
                         </ul>
@@ -1657,15 +1661,15 @@ e masala.</p>
                         <div class="batter__food__right">
                             <div class="title__section two">
                                 <div class="sub____title">
-                                    <span>Prenotazioni</span>
+                                    <span data-i18n="contact-subtitle">Prenotazioni</span>
                                 </div>
                                 <div class="main____title">
-                                    <h2 class="heading-primary">Un amore tra <span>spezie</span> e <span>tradizioni.</span></h2>
+                                    <h2 class="heading-primary" data-i18n="contact-title">Un amore tra <span>spezie</span> e <span>tradizioni.</span></h2>
                                 </div>
                                 <div class="divider wow fadeInUp animated animated" style="visibility: visible; animation-name: fadeInUp;"><div></div></div>
                             </div>
                             <div class="normal__text two">
-                                <p> Contattaci per maggiori informazioni</p>
+                                <p data-i18n="contact-text"> Contattaci per maggiori informazioni</p>
                             </div>
                             <div class="tab___secrtion">
                                 <div class="tabs-box">
@@ -1715,35 +1719,13 @@ e masala.</p>
                                         <div class="tab active-tab tab-form" id="">
                                             <div class="inner-box row">
                                                 <div class="tab___left__data col-lg-4 col-md-12 col-sm-12">
-                                                    <h2 class="mb-10">Richiesta <br> <span>speciale</span></h2>
-                                                    <p class="mb-10">Saremo pronti a stupirvi.</p>
+                                                    <h2 class="mb-10" data-i18n="special-request">Richiesta <br> <span>speciale</span></h2>
+                                                    <p class="mb-10" data-i18n="special-request-text">Saremo pronti a stupirvi.</p>
                                                 </div>
                                                 <div class="booking__form col-lg-8 col-md-12 col-sm-12">
-                                                    <form action="bookatable.php" method="POST" class="reserve-form">
-                                                        <input type="hidden" name="form_type" value="spacial_request_form">
-                                                        <div class=" form-group clearfix">
-                                                            <span class="icon-user"></span>
-                                                            <input type="text" name="personName" placeholder="Nome">
-                                                        </div>
-                                                        <!-- <div class="form-group">
-                                                            <span class="far fa-clock"></span>
-                                                            <input type="text" name="time" placeholder="Time">
-                                                        </div>
-                                                        <div class="form-group clearfix">
-                                                            <span class="icon-date"></span>
-                                                            <input type="text" name="date" placeholder="April 17">
-                                                        </div> -->
-                                                        <div class="form-group clearfix">
-                                                            <span class="fal fa-envelope"></span>
-                                                            <input type="text" name="email" placeholder="Email">
-                                                        </div>
-                                                        <div class="form-group clearfix">
-                                                            <textarea type="text" name="email"></textarea>
-                                                        </div>
-                                                        <div class="message-btn one">
-                                                            <button type="submit" class="theme-btn-three style1">Invia email</button>
-                                                        </div>
-                                                    </form>
+                                                    <div class="message-btn one">
+                                                        <a href="mailto:cottoconkarma@gmail.com" class="theme-btn-three style1" data-i18n="send-email">Invia email</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1858,12 +1840,12 @@ e masala.</p>
                                     <span>Recensioni</span>
                                 </div> -->
                                 <div class="main____title">
-                                    <h2 class="heading-primary">Tra spezie <span>indiane</span><br> e cuore <span>italiano</span></h2>
+                                    <h2 class="heading-primary" data-i18n="review-title">Tra spezie <span>indiane</span><br> e cuore <span>italiano</span></h2>
                                 </div>
                                 <div class="divider wow fadeInUp animated animated" style="visibility: visible; animation-name: fadeInUp;"><div></div></div>
                             </div>
                             <div class="normal__text two">
-                                <p> Spezie che susciteranno storie, che raccontano terre lontane</p>
+                                <p data-i18n="review-text"> Spezie che susciteranno storie, che raccontano terre lontane</p>
                             </div>
                             <!-- <div class="client-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
                                 <div class="client_block_one">
@@ -1924,7 +1906,7 @@ e masala.</p>
                         <div class="footer__title" style="min-height: -webkit-fill-available;">
                             <div class="footer__title__icon">
                                 <img src="assets/images/icons/map.png" alt="">
-                                <span class="sub____title">Indirizzo</span>
+                                <span class="sub____title" data-i18n="address-title">Indirizzo</span>
                             </div>
                             <div class="footer___title__text">
                                 <p>
@@ -1941,7 +1923,7 @@ e masala.</p>
                         <div class="footer__title" style="height: -webkit-fill-available;">
                             <div class="footer__title__icon">
                                 <img src="assets/images/icons/phone.png" alt="">
-                                <span class="sub____title">Chiamaci</span>
+                                <span class="sub____title" data-i18n="call-title">Chiamaci</span>
                             </div>
                             <div class="footer___title__text">
                                 <p>
@@ -1951,10 +1933,10 @@ e masala.</p>
                             <div class="footer__title__icon" style="margin-top:30px;">
                                 <!-- cfdf5a -->
                                 <i class="fa-solid fa-clock" style="color: #cfdf5a;margin-right:10px;"></i> 
-                                <span class="sub____title">Orari</span>
+                                <span class="sub____title" data-i18n="hours-title">Orari</span>
                             </div>
                             <div class="footer___title__text">
-                                <p>
+                                <p data-i18n="hours-text">
                                     Dal martedì al venerdì: <br> 11:00-15:00 <br> 17:00-19:30 <br>
                                      Sabato: 10:30-18 <br>
                                      Chiuso domenica e lunedì
@@ -1974,11 +1956,11 @@ e masala.</p>
                    </div>
                    <div class="footer__menu">
                         <ul>
-                            <li><a href="#divHome">Home</a>
-                            <li><a href="#divChisiamo">Chi siamo</a>
-                            <li><a href="#divMenu">Menu</a>
-                            <li><a href="#divContattaci">Contattaci</a>
-                            <li><a href="#divDove">Dove trovarci</a>
+                            <li><a href="#divHome" data-i18n="nav-home">Home</a>
+                            <li><a href="#divChisiamo" data-i18n="nav-about">Chi siamo</a>
+                            <li><a href="#divMenu" data-i18n="nav-menu">Menu</a>
+                            <li><a href="#divContattaci" data-i18n="nav-contact">Contattaci</a>
+                            <li><a href="#divDove" data-i18n="nav-location">Dove trovarci</a>
                         </ul>
                    </div>
                 </div>
@@ -2015,6 +1997,9 @@ e masala.</p>
 
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
+    
+    <!-- translation -->
+    <script src="assets/js/translation.js"></script>
 
 </body><!-- End of .page_wrapper -->
 </html>
