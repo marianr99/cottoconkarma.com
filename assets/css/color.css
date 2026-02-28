@@ -6,11 +6,9 @@
   --black-color:#000000;
   --higer-secondary-color:#efefef;
 
-  /* --primary-font: "Poppins", sans-serif; */
-  --primary-font: "Pacifico", cursive;
-  --secondary-font: "ZCOOL XiaoWei", sans-serif;
-  /* --higer-secondary-font: "Parisienne", cursive; */
-  --higer-secondary-font: "Pacifico", cursive;
+  --primary-font: "Comic Sans MS", "Comic Sans", cursive;
+  --secondary-font: "Comic Sans MS", "Comic Sans", cursive;
+  --higer-secondary-font: "Comic Sans MS", "Comic Sans", cursive;
 
 }
 
