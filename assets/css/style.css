@@ -5,6 +5,44 @@
 ====================================================================
 
 ***/
+
+/* Striscia background decorativa */
+.striscia-background {
+  position: absolute;
+  top: 0;
+  width: 197px;
+  height: 100%;
+  background-image: url('../images/striscia.png');
+  background-repeat: repeat-y;
+  background-size: 197px auto;
+  background-position: top left;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.striscia-left {
+  left: 0;
+}
+
+.striscia-right {
+  right: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .striscia-background {
+    width: 100px;
+    background-size: 100px auto;
+    opacity: 0.1;
+  }
+  .striscia-left {
+    left: 15px;
+  }
+  .striscia-right {
+    display: none;
+  }
+}
+
 .anim-icon .icon {
   position: absolute;
   background-repeat: no-repeat;
