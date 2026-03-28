@@ -14,9 +14,13 @@ const translations = {
         
         // Chi siamo
         "about-title": "Chi siamo",
-        "about-text-1": "Ogni piatto ha una conseguenza. Per questo cuciniamo con intenzione, scegliendo ingredienti locali, stagionali e sostenibili. Rispettiamo la terra, chi la coltiva e chi la nutre.",
-        "about-text-2": "Crediamo che ciò che cucini torni indietro. Meglio farlo delizioso!",
-        "about-text-3": "Noi scegliamo di mettere sapore, etica e bellezza. Cotto con Karma è più di una cucina: <span>è un modo di vivere.</span> Mangia bene. Vivi meglio.",
+        "about-text-1a": "Ogni ingrediente ha una storia, ogni piatto una conseguenza.",
+        "about-text-1b": "Nel nostro spazio non serviamo solo cibo: serviamo intenzioni.",
+        "about-text-1c": "Crediamo che cucinare sia un atto di responsabilità, non solo di gusto.",
+        "about-text-1d": "Per questo il menù che presentiamo riflette la nostra ispirazione quotidiana: ingredienti freschi, locali, stagionali, selezionati con cura e preparati con amore, nell'etica della sostenibilità che guida ogni dettaglio, rispettando la terra, chi la coltiva e chi la nutre.",
+        "about-text-3a": "Da questa base prende forma una cucina in cui la tradizione indiana incontra l'identità gastronomica dell'Italia centrale. Spezie, tecniche e materie prime dialogano con eleganza, equilibrio e profondità di sapore dando vita a piatti unici, autentici e contemporanei.",
+        "about-text-3b": "Il Karma? Per noi è semplice.",
+        "about-text-3c": "L'energia che diffondi è quella che ricevi",
         
          // Feature boxes
         "feature-1-title": "Cucina Pulita e Sicura",
@@ -78,9 +82,13 @@ const translations = {
         
         // Chi siamo
         "about-title": "About us",
-        "about-text-1": "Every dish has a consequence. That's why we cook with intention, choosing local, seasonal and sustainable ingredients. We respect the earth, those who cultivate it and those who nourish it.",
-        "about-text-2": "We believe that what you cook comes back to you. Better make it delicious!",
-        "about-text-3": "We choose to put flavor, ethics and beauty. Cotto con Karma is more than a kitchen: <span>it's a way of life.</span> Eat well. Live better.",
+        "about-text-1a": "Every ingredient has a story, every dish a consequence.",
+        "about-text-1b": "In our space, we don't just serve food: we serve intentions.",
+        "about-text-1c": "We believe that cooking is an act of responsibility, not just taste.",
+        "about-text-1d": "This is why the menu we present reflects our daily inspiration: fresh, local, seasonal ingredients, carefully selected and lovingly prepared, guided by an ethic of sustainability that shapes every detail, respecting the earth, those who cultivate it, and those who nourish themselves from it.",
+        "about-text-3a": "From this foundation emerges a cuisine where Indian tradition meets the gastronomic identity of central Italy. Spices, techniques, and raw ingredients come together with elegance, balance, and depth of flavor, giving life to unique, authentic, and contemporary dishes.",
+        "about-text-3b": "Karma? For us, it's simple:",
+        "about-text-3c": "The energy you release is the energy you receive.",
         
         // Feature boxes
         "feature-1-title": "Clean and Safe Kitchen",
